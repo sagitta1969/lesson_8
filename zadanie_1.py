@@ -1,12 +1,4 @@
 class Date_my:
-    """from datetime import date 
-        def vld_num(y, m, d):
-            try:
-                date(y, m, d)
-                return True
-            except:
-                return False"""
-    
     def __init__(self, us_date):
         self.us_date = us_date
 
@@ -29,7 +21,6 @@ class Date_my:
             except:
                 return False"""
         date = {'01': 31, '02': 28, '03': 31, '04': 30, '05': 31, '06': 30, '07': 31, '08': 31, '09': 30, '10': 31, '11': 30, '12': 31 }
-        
         x = us_date.split('-')
         d = ''
         n = int(x[0])
@@ -47,8 +38,9 @@ class Date_my:
         if s.isdigit():
             print("дата введена верно")
         else:
-            print("в дате только числа")
+            print("в дате должны быть только числа")
 
 a = Date_my('15-01-1970')
 print(a.pr_exmp())
 print(Date_my.num_did('14-03-2015'))
+print(Date_my.vld_num('14-03-r015'))
